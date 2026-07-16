@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oil & Gas Dashboard
+
+Next.js 16 App Router application for oil and gas production analysis, production prediction, well planning, and reservoir calculations.
+
+## Project Plan
+
+Read the project structure and implementation roadmap here:
+
+- [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Main App Areas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Public home page with product introduction.
+- Login and register pages using server-side validation and JWT session cookies.
+- Protected dashboard pages for production, prediction, wells, reservoir calculations, scenarios, reports, and settings.
+- Formula modules under `lib/formulas` so engineering calculations stay testable and separate from UI.
 
-## Learn More
+## Next.js Usage
 
-To learn more about Next.js, take a look at the following resources:
+This app uses the App Router in `app/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Use static rendering for public pages such as the home page.
+- Use dynamic server rendering for authenticated dashboard pages.
+- Use client components only for interactive forms, charts, filters, and calculators.
+- Use route handlers or server actions for auth, saving scenarios, and calculation APIs.
