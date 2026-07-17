@@ -170,12 +170,12 @@ export default function Home() {
                 Start workspace
                 <ArrowRight className="size-4" />
               </TransitionLink>
-              <Link
+              <TransitionLink
                 href="/dashboard"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
               >
                 Open dashboard
-              </Link>
+              </TransitionLink>
             </div>
           </div>
 
